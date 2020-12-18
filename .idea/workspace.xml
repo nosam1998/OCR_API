@@ -10,12 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1d74f28-cc4e-4e13-91ba-9e425dc59cb5" name="Default Changelist" comment="Added post route to receive a link to an image and respond with a json object.">
-      <change afterPath="$PROJECT_DIR$/models/ocrModel.js" afterDir="false" />
+    <list default="true" id="f1d74f28-cc4e-4e13-91ba-9e425dc59cb5" name="Default Changelist" comment="Added .catch() blocks to help with error handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/package.json" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,6 +70,7 @@
       <node-interpreter value="project" />
       <envs>
         <env name="MONGODB_URL" value="mongodb://localhost:27017/OCR_API" />
+        <env name="NODE_ENV" value="production" />
       </envs>
       <method v="2" />
     </configuration>
@@ -87,7 +85,9 @@
       <updated>1603970315451</updated>
       <workItem from="1603970316613" duration="7173000" />
       <workItem from="1606281209818" duration="3676000" />
-      <workItem from="1608182438898" duration="2362000" />
+      <workItem from="1608182438898" duration="5450000" />
+      <workItem from="1608257832431" duration="310000" />
+      <workItem from="1608271034561" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1603970366563</created>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603974140598</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added .catch() blocks to help with error handling">
+      <created>1608184825256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608184825256</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added post route to receive a link to an image and respond with a json object." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added post route to receive a link to an image and respond with a json object." />
+    <MESSAGE value="Added .catch() blocks to help with error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .catch() blocks to help with error handling" />
   </component>
 </project>

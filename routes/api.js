@@ -9,7 +9,7 @@ router.post('/:language/', (req, res, next) => {
     let img_path = req.body.image_url;
 
     if (!img_path) {
-        return res.json({error: `Please use the "image_url" field.`});
+        return res.json({error: `Please use the image_url field.`});
     }
 
     db.findOne({url: img_path, language: req.params.language}, (err, doc) => {
@@ -17,10 +17,10 @@ router.post('/:language/', (req, res, next) => {
         if (err) return res.json({error: "An error occurred while processing your image!", code: 1001});
 
         if (!doc) {
-            // const worker = createWorker({
-            //     logger: m => console.log(m), // Add logger here
-            // });
-            const worker = createWorker();
+            const worker = createWorker({
+                logger: m => console.log(m), // Add logger here
+            });
+            // const worker = createWorker();
 
             (async () => {
                 await worker.load();

@@ -7,6 +7,8 @@ const mongoose = require("mongoose");
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 
+var port = parseInt(process.env.PORT) || 3000;
+
 const app = express();
 
 // view engine setup
@@ -46,4 +48,8 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-module.exports = app;
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+});
+
+// module.exports = app;
