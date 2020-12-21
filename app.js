@@ -28,8 +28,8 @@ mongoose.connect(process.env.MONGODB_URL, {
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+app.on('error', console.error.bind(console, 'connection error:'));
+app.once('open', function() {
     console.log("Connected to database!")
 });
 
