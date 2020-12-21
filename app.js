@@ -25,13 +25,13 @@ mongoose.connect(process.env.MONGODB_URL, {
     useUnifiedTopology: true
 });
 
-app.use('/', indexRouter);
-app.use('/api', apiRouter);
-
 app.on('error', console.error.bind(console, 'connection error:'));
 app.once('open', function() {
     console.log("Connected to database!")
 });
+
+app.use('/', indexRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
