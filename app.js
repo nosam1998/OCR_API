@@ -19,15 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // process.env.MONGODB_URL = "mongodb://localhost:27017/OCR_API";
 
-mongoose.connect(process.env.MONGODB_URL, {
+const db = mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useUnifiedTopology: true
-});
-
-app.on('error', console.error.bind(console, 'connection error:'));
-app.once('open', function() {
-    console.log("Connected to database!")
 });
 
 app.use('/', indexRouter);
